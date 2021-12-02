@@ -80,7 +80,7 @@ begin
  //Не забудьте вернуть результат: присвоить Result результат вашей функции.
  //Result:=Power(x, 2);
  //Result:=Sqrt(x);
- Result:=Sin(x)*(x+2)+6;
+ Result:=sin(Power(x, 3));
 end;
 
 function get_name():PChar; stdcall;

@@ -29,21 +29,21 @@ object FormMain: TFormMain
     Top = 0
     Width = 696
     Height = 555
-    Align = alClient
-    Caption = 'DrawPanel'
-    ParentBackground = False
-    TabOrder = 0
-    OnCanResize = DrawPanelCanResize
-    OnClick = DrawPanelClick
-    OnMouseDown = DrawPanelMouseDown
-    OnMouseEnter = DrawPanelMouseEnter
-    OnMouseLeave = DrawPanelMouseLeave
-    OnMouseMove = DrawPanelMouseMove
-    OnMouseUp = DrawPanelMouseUp
     OnPaint = DrawPanelPaint
     OnMouseWheelDown = DrawPanelMouseWheelDown
     OnMouseWheelUp = DrawPanelMouseWheelUp
     OnKeyDown = DrawPanelKeyDown
+    DefaultPaint = False
+    OnMouseEnter = DrawPanelMouseEnter
+    OnMouseLeave = DrawPanelMouseLeave
+    OnMouseDown = DrawPanelMouseDown
+    OnMouseMove = DrawPanelMouseMove
+    OnMouseUp = DrawPanelMouseUp
+    Align = alClient
+    ParentBackground = False
+    TabOrder = 0
+    OnCanResize = DrawPanelCanResize
+    OnClick = DrawPanelClick
     DesignSize = (
       696
       555)
@@ -52,12 +52,13 @@ object FormMain: TFormMain
       Top = 303
       Width = 281
       Height = 233
-      ParentBackground = False
-      TabOrder = 0
-      Visible = False
+      DefaultPaint = False
       OnMouseDown = PanelPointsMouseDown
       OnMouseMove = PanelPointsMouseMove
       OnPaint = PanelPointsPaint
+      ParentBackground = False
+      TabOrder = 0
+      Visible = False
       object LabelGID: TLabel
         Left = 8
         Top = 208
@@ -301,11 +302,12 @@ object FormMain: TFormMain
       Top = 523
       Width = 89
       Height = 25
-      Anchors = [akLeft, akBottom]
       Caption = 'PanelInfo'
+      DefaultPaint = False
+      OnPaint = PanelInfoPaint
+      Anchors = [akLeft, akBottom]
       TabOrder = 1
       Visible = False
-      OnPaint = PanelInfoPaint
     end
   end
   object PanelSet: TPanel
@@ -498,10 +500,11 @@ object FormMain: TFormMain
     Top = 0
     Width = 137
     Height = 73
-    TabOrder = 2
-    Visible = False
+    DefaultPaint = False
     OnMouseDown = PanelPointsMouseDown
     OnPaint = PanelPointToolPaint
+    TabOrder = 2
+    Visible = False
     object EditPointName: TEdit
       Left = 8
       Top = 40
